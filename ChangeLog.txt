@@ -1,0 +1,46 @@
+GPU mrbayes ChangeLog
+
+Version 3.2.6 2018-June-16
+	* implement a GPU version of MrBayes V3.2.6 for DNA, Protein and codon models
+	* unify the three models to reduce code redundancy, thereby streamlining debugging           and facilitating synchronization with official updates
+
+Version 3.1 2015-Jan-21
+ 	* implement ta(MC)^3 (a new GPU acclerated (MC)^3 algorithm)to acclerate Mrbayes for big data
+	* use 64-bit code to break memory limit
+        * implement Kahan summation algorithm to solve the non-convergence problem
+
+Version 2.1.1 2013-Apr-16
+	* Repaired a bug which may lead the program to being unstable
+	* Optimized CUDA kernels
+
+Version 2.1 2012-Nov-4
+	* Optimized node-by-node scheduling order
+	* Removed the dependencies on CUDA SDK
+	* Simplified Makefile file
+
+Version 2.0 2012-Sep-10
+	* Rewrited time consuming CUDA kernel functions to improve performance 
+	* Add support for multi-GPUs more than 8
+	* Add adaptive task decomposition, it's flexible in dealing with either
+	short DNA sequences and long DNA sequences  
+	* Add support for double-precision floating-point
+	* Fix bugs (command string length can be 200000)
+	* Fix bugs (cutilCheckMsg() CUTIL CUDA error: kernel failed in file
+	<cuda.cu>, line *: invalid configuration argument.)
+	* Attention: This version needs NVIDIA graphics card(s) with CUDA compute capability 2.0 and above 
+
+Version 1.1.01 2012-Sep-4
+	* Fixed Bug (memory leak in LogLikeHalf)
+
+Version 1.1 2011-Dec-11
+	* Changed scheduling order from chain-by-chain to node-by-node
+
+Version 1.0 2011-Jan-9
+	* Implemented GPU mrbayes
+	* Attention: This version needs NVIDIA graphics card(s) with CUDA
+	compute capability 1.3 and above 
+
+
+
+	
+
